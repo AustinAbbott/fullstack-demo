@@ -16,7 +16,11 @@ class App extends React.Component {
   }
 
   filterHandler(filter) {
-    this.setState({ filter });
+    this.setState({filter: filter}, 
+      () => {this.setState({bugs: exampleData.filter(word => word.threatLevel === this.state.filter)})});
+
+    // this.setState({bugs: exampleData.filter(word => word.threatLevel === "Low-Priority")}, function() {console.log(this.state)})
+
   }
 
   render() {
