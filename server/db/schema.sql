@@ -11,9 +11,9 @@ CREATE TABLE bug_reports (
 "created_date" TEXT default (to_char(CURRENT_DATE, 'MM/DD/YYYY')),
 "assigned_to" TEXT,
 "threat_level" TEXT
-)
+);
 
-INSERT INTO bugs (bug_description, reported_by, created_date, assigned_to, threat_level) VALUES 
+INSERT INTO bug_reports (bug_description, reported_by, created_date, assigned_to, threat_level) VALUES 
 ('Async Swim needs to be fixed, desperately.', 'Bailey', '1/5/2020', 'Teddi', 'Critical'),
 ('Do you support the Phantom Thieves?', 'Jeff', '1/5/2020', 'Daniel', 'Low-Priority'),
 ('Unit test #202200324 is failing on Jeffs computer', 'Daniel', '1/6/2020', 'Bailey', 'Low-Priority'),
